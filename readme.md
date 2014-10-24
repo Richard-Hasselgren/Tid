@@ -1,6 +1,6 @@
 # Tid #
 
-Den här uppgiften går ut på att skriva ett program som returnerar  timmar och minuter  från en funktion med minuter som parameter.
+Den här uppgiften går ut på att skriva ett program som omvandlar minuter till timmar och minuter.
 
 ## Bedömningsmatris ##
 
@@ -28,40 +28,42 @@ Den här uppgiften går ut på att skriva ett program som returnerar  timmar och
 
 ## Uppgiftsbeskrivning ##
 
-Att beräkna hur lång tid dvd filmen tar är svårt, på fodralet står längden i minuter.
-(Hallå! Daniel vad är en dvd!)
+På imdb står längden på en film i minuter. Det kan vara svårt att
 
-Skriv en funktion minutes_to_hour_and_minutes som tar minutes som argument och returnerar timmar och minuter i en sträng
-i formen '2:30' för 2 timmar och 30 minuter.
+Skriv en funktion minutes_to_hours_and_minutes som tar minutes som argument och returnerar timmar och minuter i en sträng
+i formen "2:30" för 2 timmar och 30 minuter.
 
 Minuter måste vara ett positivt heltal.
-
-
-
 
 ### Exempel ###
 
 #### Ruby ####
 
-	minutes_to_hour_and_minutes(tal: 150)
-	#=> '2:30'
+	minutes_to_hours_and_minutes(minutes: 150)
+	#=> "2:30"
 
-	minutes_to_hour_and_minutes(tal: 45)
-	#=> '0:45
+	minutes_to_hours_and_minutes(minutes: 45)
+	#=> "0:45"
 
-	minutes_to_hour_and_minutes(tal: 0)
-	#=> 0:0
+	minutes_to_hours_and_minutes(minutes: 0)
+	#=> "0:00"
+
+	minutes_to_hours_and_minutes(minutes: 64)
+	#=> "1:04"
 
 #### Python ####
 
-	minutes_to_hour_and_minutes(tal=150)
+	minutes_to_hours_and_minutes(tal=150)
 	>>> '2:30'
 
-	minutes_to_hour_and_minutes(tal=45)
+	minutes_to_hours_and_minutes(tal=45)
 	>>> '0:45'
 
-	minutes_to_hour_and_minutes(tal=0)
-	>>> '0:0'
+	minutes_to_hours_and_minutes(tal=0)
+	>>> '0:00'
+
+	minutes_to_hours_and_minutes(minutes=64)
+	>>> "1:04"
 
 ## Genomförande ##
 
@@ -92,7 +94,7 @@ Kör `rspec` för att köra testerna.
 
 Skapa funktionerna i `lib/minutes_and_hours.py`
 
-Testerna finns i `test/minutes_to_hour_and_minutes_test.py`
+Testerna finns i `test/test_minutes_to_hour_and_minutes.py`
 
 Kör `nosetests --rednose` för att köra testerna.
 
