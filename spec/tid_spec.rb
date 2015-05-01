@@ -3,7 +3,7 @@ require_relative '../lib/minutes_and_hours'
 
 describe 'minutes_and_hours.rb' do
 
-  it 'should take minutes as  argument' do
+  it 'should take minutes as argument' do
     expect { minutes_to_hours_and_minutes() }.to raise_error ArgumentError
     expect { minutes_to_hours_and_minutes(minutes: 150)}.not_to raise_error
   end
