@@ -6,7 +6,11 @@ def minutes_to_hours_and_minutes(minutes: )
     min -= 60
 
   end
-  "#{h}:#{min}"
+  if min >= 10
+    "#{h}:#{min}"
+  else
+    "#{h}:0#{min}"
+  end
 
 end
 
